@@ -60,13 +60,18 @@ html, body{
     padding:20px 35px;
 }
 
-.time-period span{
+.nav-item{
     color:#787AB7;
     display: block;
     line-height: 40px;
 }
 
-#active{
+.nav-item:hover{
+    cursor: pointer;
+    color:white;
+}
+
+.active{
     color:white;
 }
 

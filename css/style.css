@@ -3,15 +3,21 @@
 html, body{
     margin:0;
     padding:0;
-    height:100%;
     background-color:#0D1323;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
 }
 
 .container{
     width:100%;
+    max-width: 1150px;
+    margin:auto;
     height:100%;
     display: grid;
-    grid-template-columns: 255px 255px 255px 255px;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap:30px;
     align-content: center;
     justify-content: center;
@@ -81,13 +87,12 @@ html, body{
 
 .time-cards div{
     width: 100%;
+    margin-top:20%;
     display: grid;
     align-items: center;
     grid-template-columns: auto auto;
     background-color:#1D204B;
     border-radius:15px;
-    position: absolute;
-    bottom:0;
     padding:30px;
     color:white;
     box-sizing: border-box;
@@ -154,4 +159,27 @@ html, body{
     background-image: url(../images/icon-self-care.svg);
     background-repeat: no-repeat;
     background-position: 160px -5px;
+}
+
+@media only screen and (max-width: 1150px){
+
+    html, body{
+        height:auto;
+        padding:20px 0;
+    }
+
+    .container{
+        width:90%;
+        margin: auto;
+        max-width: 325px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .user-card{
+        grid-row:1;
+    }
+
+    .container > div:last-child{
+        grid-column: 1;
+    }
 }
